@@ -1,0 +1,25 @@
+name: Ejecutar Bot de Grid
+
+on:
+  workflow_dispatch:  # Permite ejecutar manualmente
+
+jobs:
+  ejecutar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v2
+      
+      - name: Configurar Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      
+      - name: Instalar dependencias
+        run: |
+          pip install -r requirements.txt || echo "No requirements.txt"
+      
+      - name: Ejecutar bot
+        run: |
+          echo "🚀 EJECUTANDO BOT DE GRID"
+          python grid_bot.py
