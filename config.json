@@ -1,0 +1,10 @@
+{
+    "par": "POL/USDT",
+    "precio_actual": 0.11,
+    "grid_inferior": 0.09,
+    "grid_superior": 0.13,
+    "numero_ordenes": 10,
+    "inversion_total": 50,
+    "exchange": "binance",
+    "modo_prueba": true
+}
